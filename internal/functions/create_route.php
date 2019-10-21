@@ -10,15 +10,15 @@ function create_route()
     if ($path) {
         if (!file_exists($base . $path . "/" . $module . ".php")) {
             fopen($base . $path . "/" . $module . ".php", 'w');
-            $data = 'Yay! This route have been created. <br /> Hello World!';
+            $data = "<h1>Rota criada com sucesso.</h1><br />Edite o arquivo <br /> internal/modules/" . $path . "/" . $module . ".php";
             $handle = fopen($base . $path . "/" . $module . ".php", 'w');
             fwrite($handle, $data);
             fclose($handle);
             header("location: ./" . $path . "/" . $module);
         }
-    }else{
+    } else {
         fopen($base . "/" . $module . ".php", 'w');
-        $data = 'Yay! This route have been created. <br /> Hello World!';
+        $data = "<h1>Rota criada com sucesso.</h1><br />Edite o arquivo <br / >internal/modules/". $module . ".php";
         $handle = fopen($base . "/" . $module . ".php", 'w');
         fwrite($handle, $data);
         fclose($handle);

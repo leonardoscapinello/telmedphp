@@ -12,18 +12,18 @@ function load_module(){
         if(file_exists($load)){
             require_once($load);
         }else{
-            echo "<h1 style=\"margin-bottom:20px\">This route doesn't exist yet.</h1>";
-            echo "<div>You're trying to load \"{$load}\" and this file can't be found.</div>";
-            echo "<div><b>You can create it now!</b> <a href=\"routing?p=$folder&u=$module_page\">Click here to create this route.</a></div>";
+            echo "<h1 style=\"margin-bottom:20px\">Essa rota ainda não existe.</h1>";
+            echo "<div>Você tentou acessar o arquivo \"{$load}\" mas não foi possível encontra-lo.<br /></div>";
+            echo "<div><br /><b>Para criar o arquivo de forma automática </b> <a href=\"routing?p=$folder&u=$module_page\">Clique aqui</a></div>";
         }
     }else{
         $load = "internal/modules/index.php";
         if(file_exists($load)) {
             require_once($load);
         }else{
-            echo "<h1 style=\"margin-bottom:20px\">This route doesn't exist yet.</h1>";
-            echo "<div>You're trying to load \"{$load}\" and this file can't be found.</div>";
-            echo "<div><b>You can create it now!</b> <a href=\"routing?p=$folder&u=$module_page\">Click here to create this route.</a></div>";
+            echo "<h1 style=\"margin-bottom:20px\">Essa rota ainda não existe.</h1>";
+            echo "<div>Você tentou acessar o arquivo \"{$load}\" mas não foi possível encontra-lo.<br /></div>";
+            echo "<div><br /><b>Para criar o arquivo de forma automática </b> <a href=\"routing?u=$module_page\">Clique aqui</a></div>";
         }
     }
 }
