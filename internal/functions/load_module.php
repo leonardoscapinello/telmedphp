@@ -12,18 +12,18 @@ function load_module(){
         if(file_exists($load)){
             require_once($load);
         }else{
-            echo "<h1>404</h1>";
-            echo "<div>File not exists</div>";
+            echo "<h1 style=\"margin-bottom:20px\">This route doesn't exist yet.</h1>";
             echo "<div>You're trying to load \"{$load}\" and this file can't be found.</div>";
+            echo "<div><b>You can create it now!</b> <a href=\"routing?p=$folder&u=$module_page\">Click here to create this route.</a></div>";
         }
     }else{
         $load = "internal/modules/index.php";
         if(file_exists($load)) {
             require_once($load);
         }else{
-            echo "<h1>404</h1>";
-            echo "<div>File not exists</div>";
+            echo "<h1 style=\"margin-bottom:20px\">This route doesn't exist yet.</h1>";
             echo "<div>You're trying to load \"{$load}\" and this file can't be found.</div>";
+            echo "<div><b>You can create it now!</b> <a href=\"routing?p=$folder&u=$module_page\">Click here to create this route.</a></div>";
         }
     }
 }
